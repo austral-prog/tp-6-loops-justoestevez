@@ -9,7 +9,7 @@ def sum_to_n(n):
     """
     
     answer = 0
-    for 1 in range(1, n+1):
+    for i in range(1, n+1):
         answer = answer + i
     return answer
 
@@ -23,7 +23,7 @@ def sum_evens(n):
     """
     
     answer = 0
-    for 1 in range(2, n+1, 2):
+    for i in range(2, n+1, 2):
         answer = answer + i
     return answer
 
@@ -37,7 +37,7 @@ def factorial(n):
     """
     
     answer = 0
-    for 1 in range(1, n+1):
+    for i in range(1, n+1):
         answer = answer * i
     return answer
 
