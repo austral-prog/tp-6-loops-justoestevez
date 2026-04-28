@@ -45,7 +45,7 @@ def count_negatives(numbers):
     Ejemplo: count_negatives([1, 2, 3]) -> 0
     Ejemplo: count_negatives([-1, -2, -3]) -> 3
     """
-`  
+
     contador = 0
     
     for n in numbers:
