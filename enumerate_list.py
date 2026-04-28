@@ -9,13 +9,17 @@ def enumerate_list(lst):
 
     Ejemplo: enumerate_list(["Red", "Green", "", "White"]) -> ["0. Red", "1. Green", "2. White"]
     """
-    list = []
-    i = 0
-    for elemento in lst:
-        if elemento != "":
-            list.append(f"{i}.{elemento}")
-            i = i + 1
-    return list
+    resultado = []
+    i = 0  # Este es tu contador manual
+    
+    for palabra in lst:
+        if palabra != "":  # Solo si NO es un string vacío
+            # Armamos el string con el formato "indice. valor"
+            formato = f"{i}. {palabra}"
+            resultado.append(formato)
+            i = i + 1  # SOLO sumamos si agregamos una palabra
+            
+    return resultado
 
 def enumerate_backwards(lst):
     """
@@ -24,11 +28,14 @@ def enumerate_backwards(lst):
 
     Ejemplo: enumerate_backwards(["Red", "Green", ""]) -> ["0. deR", "1. neerG"]
     """
-    nueva_lista = []
-    indice = 0
+    resultado = []
+    i = 0
+    
     for palabra in lst:
         if palabra != "":
-            # Usamos slicing [::-1] para dar vuelta la palabra
-            nueva_lista.append(f"{indice}. {palabra[::-1]}")
-            indice += 1
-    return nueva_lista
+            # Invertimos la palabra con slicing
+            palabra_al_reves = palabra[::-1]
+            resultado.append(f"{i}. {palabra_al_reves}")
+            i = i + 1
+            
+    return resultado
