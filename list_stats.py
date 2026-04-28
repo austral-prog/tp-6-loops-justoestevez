@@ -36,14 +36,11 @@ def average(numbers):
 
     Ejemplo: average([10, 20, 30]) -> 20.0
     """
-    if len(numbers) == 0:
-        return 0,0
-    total = 0
-    for num in numbers:
-        total = total + n
-
-    promedio = total / len(numbers)
-    return round(promedio, 1)
+    if not numbers: # Si la lista está vacía
+        return 0.0
+    # Suma total / cantidad
+    promedio = sum(numbers) / len(numbers)
+    return round(float(promedio), 1)
 
 def describe(numbers):
     """
@@ -55,11 +52,11 @@ def describe(numbers):
 
     Ejemplo: describe([3, 1, 7, 2]) -> "Min:1 Max:7 Range:6 Avg:3.2"
     """
-    if len(numbers) == 0:
+    if not numbers:
         return "Empty list"
-    min = find_min (numbers)
-    max = find_max (numbers)
-    range = range_of (numbers)
-    avg = average (numbers)
+    min = find_min(numbers)
+    max = find_max(numbers)
+    range = range_of(numbers)
+    avg = average(numbers)
 
     return f"Min:{min} Max: {max} Range: {range} Avg: {avg}"
