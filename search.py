@@ -1,35 +1,25 @@
+def index_of(target, lst):
+    """Retorna el índice de la primera ocurrencia de target en lst, o -1."""
+    # Usamos range(len(lst)) para tener el número del índice (i)
+    for i in range(len(lst)):
+        if lst[i] == target:
+            return i  # Apenas lo encuentra, corta la función y devuelve el índice
+            
+    return -1  # Si salió del for sin encontrarlo, devuelve -1
 
 def index_of_by_index(target, lst, start):
-    """
-    Retorna el indice de la primera ocurrencia de target en lst,
-    buscando a partir del indice start (inclusive).
-    Si no se encuentra, retorna -1.
-
-    Ejemplo: index_of_by_index("Black", ["Red", "Black", "Green", "Black"], 2) -> 3
-    """
+    """Retorna el índice de la primera ocurrencia a partir de start."""
+    # El range empieza en 'start' en lugar de 0
     for i in range(start, len(lst)):
-        if lst(i) == target:
+        if lst[i] == target:
             return i
+            
     return -1
-    
-
-
-def index_of(target, lst):
-    """
-    Retorna el indice de la primera ocurrencia de target en lst.
-    Si no se encuentra, retorna -1.
-
-    Ejemplo: index_of("Black", ["Red", "Green", "Black"]) -> 2
-    """
-    return index_of_by_index(target, lst, start: 0)
-
-    
 
 def index_of_empty(lst):
-    """
-    Retorna el indice del primer string vacio ("") en lst.
-    Si no hay ninguno, retorna -1.
-
-    Ejemplo: index_of_empty(["Red", "", "Green"]) -> 1
-    """
-    return index_of_by_index(target: "", lst, start: 0)
+    """Retorna el índice del primer string vacío en lst, o -1."""
+    for i in range(len(lst)):
+        if lst[i] == "":  # Comparamos contra un string vacío
+            return i
+            
+    return -1
