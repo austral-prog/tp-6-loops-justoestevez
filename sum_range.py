@@ -38,7 +38,7 @@ def factorial(n):
     Ejemplo: factorial(5) -> 120  (1*2*3*4*5)
     """
     if n <= 0:
-        return 0
+        return 1
     answer = 0
     for 1 in range(1, n+1):
         answer = answer * i
