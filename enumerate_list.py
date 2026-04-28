@@ -11,9 +11,9 @@ def enumerate_list(lst):
     """
     list = []
     i = 0
-    for elemento in list:
+    for elemento in lst:
         if elemento != "":
-            list.append(f"{1}.{elemento}")
+            list.append(f"{i}.{elemento}")
             i = i + 1
     return list
 
@@ -26,11 +26,11 @@ def enumerate_backwards(lst):
     """
     list = []
     i = 0
-    for elemento in list:
+    for elemento in lst:
         if elemento != "":
             backwards = ""
             for letras in elemento:
                 backwards = letras + backwards
-            list.append(f"{1}.{backwards}")
+            list.append(f"{i}.{backwards}")
             i = i + 1
     return list
