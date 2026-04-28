@@ -24,13 +24,11 @@ def enumerate_backwards(lst):
 
     Ejemplo: enumerate_backwards(["Red", "Green", ""]) -> ["0. deR", "1. neerG"]
     """
-    list = []
-    i = 0
-    for elemento in lst:
-        if elemento != "":
-            backwards = ""
-            for letras in elemento:
-                backwards = letras + backwards
-            list.append(f"{i}.{backwards}")
-            i = i + 1
-    return list
+    nueva_lista = []
+    indice = 0
+    for palabra in lst:
+        if palabra != "":
+            # Usamos slicing [::-1] para dar vuelta la palabra
+            nueva_lista.append(f"{indice}. {palabra[::-1]}")
+            indice += 1
+    return nueva_lista
