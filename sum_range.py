@@ -36,8 +36,9 @@ def factorial(n):
     Ejemplo: factorial(5) -> 120  (1*2*3*4*5)
     """
     
-    answer = 0
-    for i in range(1, n+1):
-        answer = answer * i
-    return answer
-
+   if n <= 0:
+        return 1
+    total = 1
+    for i in range(1, n + 1):
+        total *= i
+    return total
