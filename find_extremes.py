@@ -9,7 +9,7 @@ def find_min(numbers):
     Ejemplo: find_min([5, 5, 5]) -> 5
     Ejemplo: find_min([-3, -1, -7]) -> -7
     """
-    min = numbres[0]
+    min = numbers[0]
     for num in numbers:
         if num < min:
             min = num
@@ -24,7 +24,7 @@ def find_max(numbers):
     Ejemplo: find_max([5, 5, 5]) -> 5
     Ejemplo: find_max([-3, -1, -7]) -> -1
     """
-    max = numbres[0]
+    max = numbers[0]
     for num in numbers:
         if num > min:
             max = num
